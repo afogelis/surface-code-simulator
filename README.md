@@ -19,7 +19,7 @@ ML decoders, dashboard, resource model, and paper reproductions build on top of 
 
 *Exponential suppression of the logical error rate with code distance at p = 0.008.*
 
-## What this demonstrates
+## Scope
 
 - **Quantum information:** surface-code memory experiments, detector error models, MWPM decoding.
 - **Statistics:** Wilson confidence intervals, per-round error rates, finite-size threshold crossing.
@@ -28,9 +28,9 @@ ML decoders, dashboard, resource model, and paper reproductions build on top of 
 
 ## What I wrote vs what I integrated
 
-This repository is honest about leaning on best-in-class libraries. The split is deliberate:
+This repository builds on existing libraries rather than reimplementing them. The split is:
 
-| Integrated (existing, world-class tools) | Authored here |
+| Integrated (existing tools) | Authored here |
 |------------------------------------------|---------------|
 | [Stim](https://github.com/quantumlib/Stim) for circuit generation, noise injection and syndrome sampling | The end-to-end experiment pipeline tying these together with typed configs |
 | [PyMatching](https://pymatching.readthedocs.io/) for MWPM decoding | Wilson-interval statistics and the per-round error-rate derivation |
@@ -106,7 +106,7 @@ for different distances estimates the threshold `p_th`.
 ## Notes on scope
 
 For very large sweeps, [`sinter`](https://pypi.org/project/sinter/) (a dependency here) is the
-production tool for parallelised Monte Carlo; this repo keeps a transparent, single-process sweep
+production tool for parallelised Monte Carlo; this repo keeps a single-process sweep
 so the statistics are easy to read and test. The full decoder comparison (union-find, belief
 propagation, ML) lives in the companion `decoder-benchmark` repo.
 
