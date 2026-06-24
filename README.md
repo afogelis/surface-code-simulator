@@ -6,8 +6,18 @@ It creates a surface-code lattice, injects circuit-level noise, extracts syndrom
 with minimum-weight perfect matching, and tracks logical failures to produce threshold plots
 and syndrome heatmaps.
 
-This is repo 1 of a seven-part [QEC research portfolio](../README.md); the decoder zoo,
+This is repo 1 of a seven-part [QEC research portfolio](https://github.com/afogelis/qec-portfolio); the decoder zoo,
 ML decoders, dashboard, resource model, and paper reproductions build on top of it.
+
+## Results at a glance
+
+![Threshold sweep: logical error rate versus physical error rate for code distances 3, 5 and 7.](docs/threshold_sweep.png)
+
+*Threshold sweep. The distance curves cross near p_th ~ 0.6%; below the crossing, larger distance lowers the logical error rate.*
+
+![Logical error rate versus code distance at a fixed below-threshold physical error rate p = 0.008.](docs/logical_vs_distance.png)
+
+*Exponential suppression of the logical error rate with code distance at p = 0.008.*
 
 ## What this demonstrates
 
