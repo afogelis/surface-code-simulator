@@ -6,7 +6,7 @@ It creates a surface-code lattice, injects circuit-level noise, extracts syndrom
 with minimum-weight perfect matching, and tracks logical failures to produce threshold plots
 and syndrome heatmaps.
 
-This is repo 1 of a seven-part [QEC research portfolio](https://github.com/afogelis/qec-portfolio); the decoder zoo,
+This is repo 1 of a ten-part [QEC research portfolio](https://github.com/afogelis/qec-portfolio); the decoder zoo,
 ML decoders, dashboard, resource model, and paper reproductions build on top of it.
 
 ## Results at a glance
