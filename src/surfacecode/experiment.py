@@ -13,7 +13,7 @@ def run_memory_experiment(config: ExperimentConfig) -> ExperimentResult:
     """Run one surface-code memory experiment end to end.
 
     Pipeline: build a noisy circuit, sample syndromes, decode with MWPM, and
-    summarise the logical failure rate with a Wilson interval and a per-round
+    summarize the logical failure rate with a Wilson interval and a per-round
     rate. Returns a fully populated :class:`ExperimentResult`.
     """
     circuit = build_surface_code_circuit(config)

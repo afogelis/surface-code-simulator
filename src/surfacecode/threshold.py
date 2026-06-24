@@ -70,7 +70,7 @@ def run_threshold_sweep(
 def estimate_threshold(points: Sequence[ThresholdPoint]) -> float | None:
     """Estimate ``p_th`` as the error rate where adjacent-distance curves cross.
 
-    This is a deliberately simple estimator: for each pair of neighbouring
+    This is a deliberately simple estimator: for each pair of neighboring
     distances we find where their logical-error-rate-vs-p curves intersect by
     linear interpolation, then average the crossings. A rigorous estimate would
     fit the finite-size scaling ansatz; that refinement lives in the paper
