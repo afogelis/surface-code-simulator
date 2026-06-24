@@ -26,6 +26,24 @@ ML decoders, dashboard, resource model, and paper reproductions build on top of 
 - **Software engineering:** typed Pydantic configs, RORO interfaces, a CLI, CI, and tests against the real Stim/PyMatching stack.
 - **Visualization:** threshold sweeps, logical-error-vs-distance scaling, syndrome heatmaps.
 
+## What I wrote vs what I integrated
+
+This repository is honest about leaning on best-in-class libraries. The split is deliberate:
+
+| Integrated (existing, world-class tools) | Authored here |
+|------------------------------------------|---------------|
+| [Stim](https://github.com/quantumlib/Stim) for circuit generation, noise injection and syndrome sampling | The end-to-end experiment pipeline tying these together with typed configs |
+| [PyMatching](https://pymatching.readthedocs.io/) for MWPM decoding | Wilson-interval statistics and the per-round error-rate derivation |
+| | The finite-size threshold-crossing estimator and its sweep harness |
+| | The visualization layer and the JSON data contracts consumed by downstream repos |
+
+In other words, this is an *experiment pipeline and statistics layer* on top of Stim and PyMatching,
+not a re-implementation of a stabilizer simulator or a matching decoder. The genuinely algorithmic
+work in the portfolio lives downstream: the from-scratch union-find and belief-propagation decoders
+in [`decoder-benchmark`](https://github.com/afogelis/decoder-benchmark) and the exact
+maximum-likelihood decoder in
+[`decoder-accuracy-reproduction`](https://github.com/afogelis/decoder-accuracy-reproduction).
+
 ## Install
 
 ```bash
