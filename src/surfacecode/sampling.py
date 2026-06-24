@@ -44,7 +44,9 @@ class SyndromeSample:
         return int(self.observable_flips.shape[1])
 
 
-def sample_syndromes(circuit: stim.Circuit, *, shots: int, seed: int | None = None) -> SyndromeSample:
+def sample_syndromes(
+    circuit: stim.Circuit, *, shots: int, seed: int | None = None
+) -> SyndromeSample:
     """Sample ``shots`` detector/observable batches from ``circuit``.
 
     Parameters

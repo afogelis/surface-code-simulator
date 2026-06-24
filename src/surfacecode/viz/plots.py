@@ -5,7 +5,6 @@ from __future__ import annotations
 from collections.abc import Sequence
 
 import matplotlib.pyplot as plt
-import numpy as np
 from matplotlib.axes import Axes
 
 from ..types import ThresholdPoint, ThresholdResult
@@ -37,8 +36,12 @@ def plot_threshold_sweep(result: ThresholdResult, *, ax: Axes | None = None) -> 
         ax.errorbar(ps, lers, yerr=[lows, highs], marker="o", capsize=3, label=f"d = {distance}")
 
     if result.threshold_estimate is not None:
-        ax.axvline(result.threshold_estimate, linestyle="--", color="gray",
-                   label=f"p_th ~ {result.threshold_estimate:.4f}")
+        ax.axvline(
+            result.threshold_estimate,
+            linestyle="--",
+            color="gray",
+            label=f"p_th ~ {result.threshold_estimate:.4f}",
+        )
 
     ax.set_xscale("log")
     ax.set_yscale("log")

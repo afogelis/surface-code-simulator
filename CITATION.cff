@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Surface Code Simulator"
+abstract: "Circuit-level surface code Monte Carlo simulation with syndrome extraction, logical-failure tracking and threshold analysis."
+type: software
+authors:
+  - family-names: "Fogelis"
+    given-names: "Andrew"
+version: "0.1.0"
+date-released: "2026-06-23"
+license: MIT
+repository-code: "https://github.com/afogelis/surface-code-simulator"
+keywords:
+  - quantum-error-correction
+  - surface-code
+  - stim
+  - pymatching
+  - threshold
